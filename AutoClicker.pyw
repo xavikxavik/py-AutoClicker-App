@@ -53,9 +53,9 @@ class ClickerRobot:
             self.UI.status_label.setText('Status: Searching image object...')
             position = imagesearch(image_path)
             if position[0] != -1:
-                pyautogui.click(position)
                 width, length = position
-                pyautogui.moveTo(width + 150, length + 150)
+                pyautogui.moveTo(width + 20, length + 20)
+                pyautogui.click()
                 click_count += 1
                 self.UI.status_label.setText('Status: Clicked ' + str(click_count) + ' times.')
 
